@@ -1,0 +1,33 @@
+{
+  "name": "node-api",
+  "version": "1.0.0",
+  "description": "Create a REST API using Node.js that can run CRUD methods to a database",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RussellAjax/100DaysOfCode-Day29-node-api.git"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "Russell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RussellAjax/100DaysOfCode-Day29-node-api/issues"
+  },
+  "homepage": "https://github.com/RussellAjax/100DaysOfCode-Day29-node-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.19",
+    "nodemon": "^2.0.4"
+  }
+}
