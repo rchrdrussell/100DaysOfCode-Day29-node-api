@@ -10,7 +10,7 @@ exports.create = (req, res) => {
 	}
 
 	//Create a tutorial
-	const Tutorial = new Tutorial ({
+	const tutorial = new Tutorial ({
 		title: req.body.title,
 		description: req.body.description,
 		published: req.body.published ? req.body.published: false //What is the ?
@@ -41,7 +41,7 @@ exports.findAll = (req, res) => {
 
 	Tutorial.find(condition)
 	  .then(data => {
-		  res.send(data):
+		  res.send(data);
 	  })
 	  .catch(err => {
 		  res.status(500).send({
@@ -62,7 +62,7 @@ exports.findOne = (req, res) => {
 		  }else{
 			  res.send(data);
 		  }
-	  });
+	  })
 	  .catch(err => {
 		  res
 		    .status(500)
@@ -85,7 +85,7 @@ exports.update = (req, res) => {
 		  }else{
 			  res.send({message: "Tutorial was updated successfully!"});
 		  }
-	  });
+	  })
 	  .catch(err => {
 		  res.status(500).send({message: "Error updating Tutorial!"});
 	  });
@@ -102,7 +102,7 @@ exports.delete = (req, res) => {
 		  }else{
 			  res.send({message: "Tutorial was deleted successfully!"});
 		  }
-	  });
+	  })
 	  .catch(err => {
 		  res.status(500).send({message: "Could not delete tutorial!"});
 	  });
@@ -112,7 +112,7 @@ exports.delete = (req, res) => {
 exports.deleteAll = (req, res) => {
 	Tutorial.deleteMany({}) //what does ({}) mean?
 	  .then(data => {
-		  res.send({message: "All data successfully deleted";});
+		  res.send({message: "All data successfully deleted"});
 	  })
 	  .catch(err => {
 		  res.status(500).send({message: "Some error occured"});

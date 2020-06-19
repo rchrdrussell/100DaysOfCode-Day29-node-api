@@ -1,5 +1,5 @@
 module.exports = app => {
-	const tutorials = require('../contorllers/tutorial.contorller.js');
+	const tutorials = require('../controllers/tutorial.contorller.js');
 
 	var router = require('express').Router();
 
@@ -23,6 +23,10 @@ module.exports = app => {
 
 	//Delete all tutorials
 	router.delete('/', tutorials.deleteAll);
-
+	
+	/*Sets up the route of the HTTP request.
+	 /api/tutorials: GET, POST, DELETE
+	 /api/tutorials/:id: PUT, GET, DELETE
+	 /api/tutorial/published: GET*/
 	app.use('/api/tutorials', router);
 };

@@ -35,6 +35,8 @@ app.get('/', (req, res) => {
 	res.json({message: 'Welcome to the REST API'}); 
 });
 
+require('./app/routes/tutorial.routes')(app)
+
 /*Set port, listen for requests*/
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
